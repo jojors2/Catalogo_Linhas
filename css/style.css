@@ -6,16 +6,18 @@
 }
 
 /* BASE */
-html, body {
-  height: 100%;
+html {
+  font-size: 16px; /* base para rem */
 }
 
 body {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
   background-color: #F2EADB;
   font-family: Arial, Helvetica, sans-serif;
   color: #5c4636;
+  line-height: 1.5;
 }
 
 /* HEADER */
@@ -23,19 +25,20 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 10px;
+  padding: clamp(10px, 2vw, 20px);
   background-color: #E6D8C3;
 }
 
 .logo-img {
-  width: 100px;
+  width: clamp(80px, 10vw, 120px);
 }
 
 .menu a {
-  margin-left: 20px;
+  margin-left: clamp(10px, 2vw, 20px);
   text-decoration: none;
   color: #5c4636;
   font-weight: bold;
+  font-size: clamp(14px, 1.5vw, 18px);
 }
 
 /* MAIN */
@@ -46,34 +49,43 @@ main {
 /* HOME */
 .home {
   text-align: center;
-  padding: 80px 20px;
+  padding: clamp(40px, 10vw, 80px) 20px;
+}
+
+.home h1 {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+.home p {
+  font-size: clamp(1rem, 3vw, 1.2rem);
 }
 
 .btn {
   display: inline-block;
   margin-top: 20px;
-  padding: 12px 24px;
+  padding: clamp(10px, 2vw, 16px) clamp(20px, 5vw, 24px);
   background-color: #5c4636;
   color: #fff;
   text-decoration: none;
   border-radius: 8px;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
 }
 
 /* CATÁLOGO */
 .catalogo {
-  padding: 40px 20px;
+  padding: clamp(20px, 5vw, 40px) 20px;
   text-align: center;
 }
 
 .catalogo-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 30px;
-  margin-top: 30px;
+  gap: clamp(15px, 3vw, 30px);
+  margin-top: clamp(20px, 5vw, 30px);
 }
 
 .produto-card img {
-  width: 100%;
+  width: 80%;
   max-width: 180px;
   margin: 0 auto;
   display: block;
@@ -81,20 +93,20 @@ main {
 
 .produto-card p {
   margin-top: 10px;
-  font-size: 14px;
+  font-size: clamp(12px, 3vw, 14px);
   font-weight: bold;
 }
 
 /* RODAPÉ */
 footer {
   background-color: #5c4636;
-  padding: 20px;
+  padding: clamp(15px, 3vw, 20px);
   text-align: center;
 }
 
 footer p {
   color: #fff;
-  font-size: 13px;
+  font-size: clamp(12px, 2vw, 13px);
 }
 
 .rodape-links {
@@ -102,8 +114,8 @@ footer p {
 }
 
 .rodape-links a {
-  margin: 0 10px;
+  margin: 0 clamp(5px, 2vw, 10px);
   color: #fff;
   text-decoration: none;
-  font-size: 13px;
+  font-size: clamp(12px, 2vw, 13px);
 }
