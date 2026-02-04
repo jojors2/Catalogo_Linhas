@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Catálogo | PandaGurumi</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="logo-header">
+  <img src="assets/logo.png" class="logo-img">
+  <nav class="menu">
+    <a href="index.html">Home</a>
+    <a href="catalogo.html">Catálogo</a>
+    <a href="contato.html">Contato</a>
+    <a href="quemsou.html">Sobre mim</a>
+  </nav>
+</header>
+
+<section class="catalogo">
+  <h2>CORES</h2>
+
+  <div class="catalogo-grid" id="catalogo"></div>
+</section>
+
+<script src="js/linhas.js"></script>
+<script>
+  const container = document.getElementById("catalogo");
+
+  linhas.forEach(linha => {
+    container.innerHTML += `
+      <div class="produto-card">
+        <img src="${linha.imagem}">
+        <p>${linha.codigo} - ${linha.nome.toUpperCase()}</p>
+      </div>
+    `;
+  });
+</script>
+
+<footer class="rodape">
+  <p>© 2026 PandaGurumi — Todos os direitos reservados</p>
+
+  <div class="rodape-links">
+    <a href="index.html">Home</a>
+    <a href="catalogo.html">Catálogo</a>
+    <a href="contato.html">Contato</a>
+    <a href="quemsou.html">Sobre mim</a>
+  </div>
+</footer>
+
+
+</body>
+</html>

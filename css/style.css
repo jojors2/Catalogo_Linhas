@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  background-color: #F2EADB;
+  font-family: Arial, sans-serif;
+}
+
+.logo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.logo-img {
+  width: 120px;
+}
+
+.menu a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #5c4636;
+  font-weight: bold;
+}
+
+.home {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #5c4636;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.catalogo {
+  padding: 40px;
+  text-align: center;
+}
+
+.catalogo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 40px;
+}
+
+.produto-card img {
+  width: 100%;
+}
+
+.produto-card p {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #5c4636;
+}
+
+.rodape {
+  background-color: #e6dcc8;
+  padding: 20px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.rodape p {
+  margin: 0;
+  font-size: 14px;
+  color: #5c4636;
+}
+
+.rodape-links {
+  margin-top: 10px;
+}
+
+.rodape-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #5c4636;
+  font-weight: bold;
+}
+
+.rodape-links a:hover {
+  text-decoration: underline;
+}
