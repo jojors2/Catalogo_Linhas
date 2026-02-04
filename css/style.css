@@ -7,7 +7,7 @@
 
 /* BASE */
 html {
-  font-size: 16px; /* base para rem */
+  font-size: px; /* base para rem */
 }
 
 body {
@@ -25,12 +25,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: clamp(10px, 2vw, 20px);
+  padding: clamp(10px, 2vw, 10px);
   background-color: #E6D8C3;
 }
 
 .logo-img {
-  width: clamp(80px, 10vw, 120px);
+  width: clamp(100px, 10vw, 120px);
 }
 
 .menu a {
@@ -38,7 +38,24 @@ body {
   text-decoration: none;
   color: #5c4636;
   font-weight: bold;
-  font-size: clamp(14px, 1.5vw, 18px);
+  font-size: clamp(20px, 1.5vw, 18px);
+  position: relative; /* necessário para o pseudo-elemento */
+  transition: color 0.3s;
+}
+
+.menu a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #5c4636;
+  left: 0;
+  bottom: -3px;
+  transition: width 0.3s;
+}
+
+.menu a:hover::after {
+  width: 100%;
 }
 
 /* MAIN */
@@ -69,6 +86,12 @@ main {
   text-decoration: none;
   border-radius: 8px;
   font-size: clamp(0.9rem, 2vw, 1.1rem);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: #7a614d; 
+  transform: scale(1.05); 
 }
 
 /* CATÁLOGO */

@@ -1,50 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="UTF-8">
-  <title>Catálogo | PandaGurumi</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo | PandaGurumi</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
 <header class="logo-header">
-  <img src="assets/logo.png" alt="PandaGurumi" class="logo-img">
-
-  <nav class="menu">
-    <a href="index.html">Home</a>
-    <a href="catalogo.html">Catálogo</a>
-  </nav>
+    <img src="assets/logo.png" alt="PandaGurumi" class="logo-img">
+    <nav class="menu">
+        <a href="index.html">Home</a>
+        <a href="catalogo.html">Catálogo</a>
+    </nav>
 </header>
 
 <main>
-  <section class="catalogo">
-    <h2>CORES</h2>
-    <div class="catalogo-grid" id="catalogo"></div>
-  </section>
+    <section class="catalogo">
+        <h2>LINHA AMIGURUMI</h2>
+        <div class="catalogo-grid" id="catalogo"></div>
+    </section>
 </main>
 
 <footer>
-  <p>© 2026 PandaGurumi — Todos os direitos reservados</p>
-  <div class="rodape-links">
-    <a href="index.html">Home</a>
-    <a href="catalogo.html">Catálogo</a>
-  </div>
+    <p>© 2026 PandaGurumi — Todos os direitos reservados</p>
 </footer>
 
-<script src="js/linhas.js"></script>
+<script src="js/linhas_amigurumi.js"></script>
 <script>
-  const container = document.getElementById("catalogo");
+    const container = document.getElementById("catalogo");
 
-  linhas.forEach(linha => {
-    container.innerHTML += `
-      <div class="produto-card">
-        <img src="${linha.imagem}" alt="${linha.codigo} - ${linha.nome}">
-        <p>${linha.codigo} - ${linha.nome.toUpperCase()}</p>
-      </div>
-    `;
-  });
+    function renderizarCatalogo() {
+        if (!container) return;
+        container.innerHTML = "";
+        
+        linhas_amigurumi.forEach(linha => {
+            container.innerHTML += `
+            <div class="produto-card">
+                <img src="${linha.imagem}" alt="${linha.cod} - ${linha.nome}">
+                <p>${linha.cod} - ${linha.nome.toUpperCase()}</p>
+            </div>
+            `;
+        });
+    }
+
+    // Executa a função assim que a página termina de carregar
+    window.onload = renderizarCatalogo;
 </script>
 
 </body>
