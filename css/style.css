@@ -113,7 +113,9 @@ main {
   padding: clamp(20px, 5vw, 40px) 20px;
   text-align: center; 
   text-decoration: underline;
-  font-size: 30px;;
+  margin-top: 50px;
+  font-size: clamp(1.2rem, 5vw, 2.5rem);
+  margin-bottom: 15px;
 }
 
 .catalogo-grid {
