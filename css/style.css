@@ -1,13 +1,11 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BASE */
 html {
-  font-size: 45px;
+  font-size: 20px;
   font-weight: 400;
 }
 
@@ -21,130 +19,173 @@ body {
   line-height: 1.5;
 }
 
-
-/* HEADER */
 .logo-header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: clamp(20px, 2vw, 10px);
+  padding: 15px 5%;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #E6D8C3;
+  gap: clamp(20px, 5vw, 40px);
 }
 
 .logo-img {
-  width: clamp(115px, 10vw, 120px);
+  width: clamp(130px, 12vw, 160px);
+  height: auto;
+}
+
+.menu {
+  display: flex;
+  gap: 10px;
 }
 
 .menu a {
-  margin-left: clamp(10px, 2vw, 20px) ;
   text-decoration: none;
   color: #75411a;
   font-weight: 515;
-  font-size: clamp(30px, 1.5vw, 18px);
-  position: relative; /* necessário para o pseudo-elemento */
+  font-size: clamp(20px, 2vw, 28px);
+  position: relative;
+  padding: 5px 10px;
   transition: color 0.3s;
 }
-
 
 .menu a::after {
   content: '';
   position: absolute;
   width: 0;
-  height: 2px;
+  height: 3px;
   background-color: #75411a;
-  left: 0;
-  bottom: -3px;
+  left: 10px;
+  bottom: -5px;
   transition: width 0.3s;
 }
 
-.menu a:hover::after {
-  width: 100%;
+.menu a:hover::after, 
+.menu a.active::after {
+  width: calc(100% - 20px);
 }
 
-/* MAIN */
+.menu a.active {
+  color: #75411a;
+}
+
 main {
   flex: 1;
 }
 
-/* HOME */
 .home {
   text-align: center;
-  padding: clamp(40px, 10vw, 80px) 20px;
+  padding: clamp(30px, 8vw, 50px) 20px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .home h1 {
-  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  margin-top: 50px;
+  font-size: clamp(1.2rem, 5vw, 2.5rem);
+  margin-bottom: 15px;
 }
 
 .home p {
+  margin-top: 50px;
   font-size: clamp(1rem, 3vw, 1.2rem);
 }
 
 .btn {
   display: inline-block;
-  margin-top: 20px;
-  padding: clamp(10px, 2vw, 16px) clamp(20px, 5vw, 24px);
+  margin-top: 50px;
+  padding: clamp(10px, 2vw, 16px) clamp(20px, 5vw, 32px);
   background-color: #75411a;
   color: #fff;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 50px;
   font-size: clamp(0.9rem, 2vw, 1.1rem);
   transition: background-color 0.3s, transform 0.2s;
 }
 
 .btn:hover {
-  background-color: #7a614d; 
-  transform: scale(1.05); 
+  background-color: #7a614d;
+  transform: scale(1.05);
 }
 
-/* CATÁLOGO */
 .catalogo {
   padding: clamp(20px, 5vw, 40px) 20px;
-  text-align: center;
-  text-decoration: underline
+  text-align: center; 
+  text-decoration: underline;
+  font-size: 30px;;
 }
 
 .catalogo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
   gap: clamp(15px, 3vw, 30px);
   margin-top: clamp(20px, 5vw, 30px);
+  
 }
 
 .produto-card img {
-  width: 80%;
+  width: 90%;
   max-width: 180px;
   margin: 0 auto;
   display: block;
+  border-radius: 15px;
 }
 
 .produto-card p {
   margin-top: 10px;
-  font-size: clamp(14px, 3vw, 14px);
-  
+  font-size: clamp(14px, 2.5vw, 16px);
+  font-weight: 500;
+  color: #75411a;
 }
 
-/* RODAPÉ */
 footer {
   background-color: #75411a;
-  padding: clamp(15px, 3vw, 20px);
+  padding: clamp(20px, 4vw, 30px);
   text-align: center;
+  margin-top: 40px;
 }
 
 footer p {
   color: #fff;
-  font-size: clamp(12px, 2vw, 13px);
+  font-size: clamp(12px, 2vw, 14px);
 }
 
 .rodape-links {
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 .rodape-links a {
-  margin: 0 clamp(5px, 2vw, 10px);
+  margin: 0 10px;
   color: #fff;
   text-decoration: none;
-  font-size: clamp(12px, 2vw, 13px);
+  font-size: clamp(12px, 2vw, 14px);
+}
+
+@media (max-width: 480px) {
+  .logo-header {
+    padding: 20px 15px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .logo-img {
+    width: 140px;
+  }
+
+  .menu a {
+    font-size: 20px;
+  }
+
+  .catalogo-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+}
+
+.assinatura-container {
+    margin-top: 100px; /* Espaço entre o botão e a assinatura */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;700&display=swap" rel="stylesheet">    <link rel="icon" type="image/x-icon" href="assets/icon.png">
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo | PandaGurumi</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;515;700&display=swap" rel="stylesheet">
+    
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
 <header class="logo-header">
-    <img src="assets/logo.png" alt="PandaGurumi" class="logo-img">
+    <a href="index.html">
+        <img src="assets/logo.png" alt="PandaGurumi" class="logo-img">
+    </a>
     <nav class="menu">
         <a href="index.html">Home</a>
-        <a href="catalogo.html">Catálogo</a>
+        <a href="catalogo.html" class="active">Catálogo</a>
     </nav>
 </header>
 
@@ -25,7 +32,7 @@
 </main>
 
 <footer>
-    <p>© 2026 PandaGurumi — Todos os direitos reservados</p>
+    <p>© 2026 PandaGurumi</p>
 </footer>
 
 <script src="js/linhas_amigurumi.js"></script>
@@ -33,20 +40,25 @@
     const container = document.getElementById("catalogo");
 
     function renderizarCatalogo() {
-        if (!container) return;
+        if (!container || typeof linhas_amigurumi === 'undefined') return;
+        
         container.innerHTML = "";
         
+        // Criando o HTML como uma string única para melhor performance
+        let htmlGerado = "";
+        
         linhas_amigurumi.forEach(linha => {
-            container.innerHTML += `
+            htmlGerado += `
             <div class="produto-card">
                 <img src="${linha.imagem}" alt="${linha.cod} - ${linha.nome}">
                 <p>${linha.cod} - ${linha.nome.toUpperCase()}</p>
             </div>
             `;
         });
+        
+        container.innerHTML = htmlGerado;
     }
 
-    // Executa a função assim que a página termina de carregar
     window.onload = renderizarCatalogo;
 </script>
 
