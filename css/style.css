@@ -7,7 +7,7 @@
 
 /* BASE */
 html {
-  font-size: px; /* base para rem */
+  font-size: 40px; /* base para rem */
 }
 
 body {
@@ -16,14 +16,14 @@ body {
   min-height: 100vh;
   background-color: #F2EADB;
   font-family: Arial, Helvetica, sans-serif;
-  color: #5c4636;
+  color: #75411a;
   line-height: 1.5;
 }
 
 /* HEADER */
 .logo-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding: clamp(10px, 2vw, 10px);
   background-color: #E6D8C3;
@@ -34,9 +34,9 @@ body {
 }
 
 .menu a {
-  margin-left: clamp(10px, 2vw, 20px);
+  margin-left: clamp(10px, 2vw, 20px) ;
   text-decoration: none;
-  color: #5c4636;
+  color: #75411a;
   font-weight: bold;
   font-size: clamp(20px, 1.5vw, 18px);
   position: relative; /* necessário para o pseudo-elemento */
@@ -48,7 +48,7 @@ body {
   position: absolute;
   width: 0;
   height: 2px;
-  background-color: #5c4636;
+  background-color: #75411a;
   left: 0;
   bottom: -3px;
   transition: width 0.3s;
@@ -81,7 +81,7 @@ main {
   display: inline-block;
   margin-top: 20px;
   padding: clamp(10px, 2vw, 16px) clamp(20px, 5vw, 24px);
-  background-color: #5c4636;
+  background-color: #75411a;
   color: #fff;
   text-decoration: none;
   border-radius: 8px;
@@ -122,7 +122,7 @@ main {
 
 /* RODAPÉ */
 footer {
-  background-color: #5c4636;
+  background-color: #75411a;
   padding: clamp(15px, 3vw, 20px);
   text-align: center;
 }
