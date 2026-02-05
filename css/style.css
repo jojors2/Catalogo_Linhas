@@ -45,7 +45,7 @@ body {
   text-decoration: none;
   color: #75411a;
   font-weight: 515;
-  font-size: clamp(20px, 2vw, 28px);
+  font-size: clamp(30px, 2vw, 28px);
   position: relative;
   padding: 5px 10px;
   transition: color 0.3s;
@@ -111,12 +111,12 @@ main {
 }
 
 .catalogo {
-  padding: clamp(20px, 5vw, 40px) 20px;
+  padding: clamp(20px, 5vw, 20px) 20px;
   text-align: center; 
   text-decoration: underline;
-  margin-top: 50px;
+  margin-top: 0px;
   font-size: clamp(1.2rem, 5vw, 2.5rem);
-  margin-bottom: 15px;
+  margin-bottom: 100px;
 }
 
 .catalogo-grid {
@@ -187,7 +187,7 @@ footer p {
   }
 
   .menu a {
-    font-size: 18px; 
+    font-size: 25px; 
     margin-left: 5px;
     margin-right: 5px;
   }
