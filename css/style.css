@@ -9,6 +9,8 @@ html {
   font-weight: 400;
 }
 
+
+
 body {
   display: flex;
   flex-direction: column;
@@ -165,28 +167,41 @@ footer p {
 }
 
 @media (max-width: 480px) {
+
+  html {
+    font-size: 16px; 
+  }
+
+  .catalogo h2 {
+    font-size: 1.2rem; 
+    margin-bottom: 10px;
+  }
+
   .logo-header {
-    padding: 20px 15px;
+    padding: 15px 10px;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
   }
 
   .logo-img {
-    width: 140px;
+    width: 120px;
   }
 
   .menu a {
-    font-size: 20px;
+    font-size: 18px; 
+    margin-left: 5px;
+    margin-right: 5px;
   }
 
   .catalogo-grid {
     grid-template-columns: 1fr 1fr;
     gap: 12px;
+    padding: 0 10px;
   }
 }
 
 .assinatura-container {
-    margin-top: 100px; /* Espaço entre o botão e a assinatura */
+    margin-top: 100px; 
     display: flex;
     justify-content: center;
     align-items: center;
