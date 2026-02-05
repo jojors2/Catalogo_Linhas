@@ -7,7 +7,8 @@
 
 /* BASE */
 html {
-  font-size: 20px; /* base para rem */
+  font-size: 45px;
+  font-weight: 400;
 }
 
 body {
@@ -15,33 +16,37 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background-color: #F2EADB;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'DynaPuff', sans-serif;
   color: #75411a;
   line-height: 1.5;
 }
+
 
 /* HEADER */
 .logo-header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: clamp(10px, 2vw, 10px);
+  padding: clamp(20px, 2vw, 10px);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
   background-color: #E6D8C3;
 }
 
 .logo-img {
-  width: clamp(100px, 10vw, 120px);
+  width: clamp(115px, 10vw, 120px);
 }
 
 .menu a {
   margin-left: clamp(10px, 2vw, 20px) ;
   text-decoration: none;
   color: #75411a;
-  font-weight: bold;
-  font-size: clamp(20px, 1.5vw, 18px);
+  font-weight: 515;
+  font-size: clamp(30px, 1.5vw, 18px);
   position: relative; /* necessário para o pseudo-elemento */
   transition: color 0.3s;
 }
+
 
 .menu a::after {
   content: '';
@@ -98,6 +103,7 @@ main {
 .catalogo {
   padding: clamp(20px, 5vw, 40px) 20px;
   text-align: center;
+  text-decoration: underline
 }
 
 .catalogo-grid {
@@ -116,8 +122,8 @@ main {
 
 .produto-card p {
   margin-top: 10px;
-  font-size: clamp(12px, 3vw, 14px);
-  font-weight: bold;
+  font-size: clamp(14px, 3vw, 14px);
+  
 }
 
 /* RODAPÉ */
