@@ -131,12 +131,9 @@ main {
   width: 80%;
   max-width: 250px;
   height: auto;
-  transition: transform 0.3s ease;
+  
 }
 
-.home-img-je:hover {
-  transform: scale(1.05);
-}
 
 .catalogo {
   padding: 40px 20px;
