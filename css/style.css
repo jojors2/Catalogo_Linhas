@@ -26,8 +26,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   padding: 15px 5%;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+
   background-color: #E6D8C3;
   gap: clamp(20px, 5vw, 40px);
 }
